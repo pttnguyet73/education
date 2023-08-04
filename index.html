@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> MOON CENTER </title>
+        <link rel="icon" href="img/logo2.png">
+        <style>
+            html {font-size: 62.5%;
+        }
+            * {
+                margin: 0 auto;
+                padding: 0;
+        }
+        body {
+            width: 960px;
+            background-image: url(img/BEACH\ LOVE\ 🌊🤍🏖_\ on\ Beach\ Love\ Australia.jpg);
+            background-size: cover;
+        }
+        a {text-decoration: none;}
+        /* định dạng chung header, footer, log */
+        header, footer, .log, .main {
+            box-sizing: border-box;
+            width: 960px;
+            margin: 10px;       
+        }
+        /*định dạng header */
+        header {
+            background-color: #d3e3fc;
+            display: flex;
+        }
+        header div {
+            flex: 1;
+        }
+       .logo {
+            box-sizing: border-box;
+            float: left;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 15px 50px;      
+        }
+        header h1, header h3 {
+            width: 450px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 5rem;
+            font-family: cursive;
+            font-weight: bolder;
+            color: #00887A;
+            margin: 15px;
+        }
+        header h3 {
+            font-size: 2.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: lighter;
+        }
+       .monkey {
+           width: 80px;
+           height: 80px;
+           margin: 20px 0 0 50px;
+       }
+       header h5 {
+           font-size: 1.2rem;
+           color: #00887A;
+           font-weight: lighter;
+       }
+       /* Định dạng cho log */
+       .log {
+           background-color: #ffeee7;
+           height: 50px;
+           border: 2px solid #d3e3fc;
+       }
+       .search {
+           margin: 10px;
+           width: 200px;
+           float: left;
+           position: relative;
+       }
+        .search input { height: 25px;}
+       .search img {
+          width: 22px;
+          height: 22px;
+          position: absolute;
+          top: 50%;
+          left: 78%;
+          transform: translate(-50%, -50%);
+       }
+       input[type="text"] {
+               border: 2px solid #d3e3fc;
+               padding: 2px;
+       }
+       .box {
+        float: right;
+        display: inline;
+        width: 80px;
+        padding: 8px;
+        border: 2px solid #d3e3fc;
+        background-color: white;
+        margin: 8px;
+       }
+       .box h4 { 
+          text-align: center;
+          color: #00887A;
+          font-size: 1.5rem;
+        }
+        /* định dạng chữ */
+        .hi {
+            margin: 30px;
+            font-size: 5rem;
+            color: #00887A;
+            text-align: center;
+            font-family: cursive;
+           outline-style: dashed;
+           outline-color: #00887A;
+            animation: outline-offset 2s infinite alternate;
+             outline-offset: -5px;
+        }
+        @keyframes outline-offset {
+            0% {
+             outline-offset: -5px;
+            }
+           100% {
+             outline-offset: 30px;
+           }
+        }
+        .hi p {
+            animation: text-shadow 2s infinite alternate;
+        }
+        @keyframes text-shadow {
+            0% {
+               text-shadow: 0 0 black;
+             }
+            100% {
+               text-shadow: 20px 20px 10px rgba(0,0,0,.5);
+}
+        }
+        /* Định dạng circle */
+        .main {
+            box-sizing: border-box;
+            width: 960px;
+            display: flex;
+            flex-wrap: wrap;
+            border: 5px solid #00887A;
+        }
+        .circle {
+            flex:1;
+            width: 150px;
+            height: 150px;
+            border: 3px solid #00887A;
+            border-radius: 50%;
+            position: relative;
+            margin: 20px 40px;
+            transition: transform 1s ease;
+            cursor: pointer;
+        }
+        .circle img {
+            width: 60px;
+            height: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+        }
+        .circle p {
+            text-align: center;
+            margin-top: 23px;
+            font-size: 2rem;
+            color: #00887A;
+            width: 100%;
+        }
+        .circle:hover p{
+            color: black;
+            font-weight: bold;
+        }
+        .circle:hover {
+            transform: scale(1.3);
+            background: white ;
+        }
+        /* định dạng footer */
+        footer {
+            display: flex;
+            background-color: #d3e3fc;
+        }
+        .app, .locate { flex: 2;}
+        .app, .locate, .by{
+            padding: 15px 15px;
+            font-size:1.3rem;
+            color: #00887A;
+        }
+        .by { flex:1;}
+        .locate img {
+            float: left;
+        }
+        .by {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div>
+            <a href="index.html"><img src="img/logo2.png" alt="logo" class="logo"></a>
+            </div>
+            <div>
+               <h1>ENGLISH</h1>
+               <h3>Key of success</h3>
+            </div>
+            <div>
+                <img src="img/monkey.png" alt="" class="monkey">
+                <h5>HOTLINE: 0397574773 <br>
+                <a href="mailto:pnguyet1992@gmail.com" style="color:#00887A">  EMAIL: mooncenter@email.com</h5>
+            </div>
+        </header>
+        <main>
+            <div class="log">
+                <div class="search">
+                    <form action="" method="post"></form>
+                    <input type="text" placeholder="search" >
+                     <a href="#"><img src="img/search-icon.gif" alt=""></a>
+                 </div>
+                 <div class="box">   
+                    <a href="dangki.html"><h4>SIGN UP</h4></a>
+                </div>
+                <div class="box">
+                   <a href="dangnhap.html"><h4>LOG IN</h4></a>
+                 </div>
+            </div>
+            <main class="main">
+                <div class="hi"><p>HI, WELCOME TO MOON CENTER. LET'S STARTED!!</p></div>
+                <a href="home.html"><div class="circle">
+                   <p> HOME </p>
+                   <img src="img/home.png" alt="">
+                </div></a>
+            <div class="circle">
+                <p>COURSE</p>
+                <img src="img/course.png" alt="">
+            </div>
+            <div class="circle">
+                <p>ASIGNMENT</p>
+                <img src="img/homework (1).png" alt="">
+            </div>
+            <div class="circle">
+                <p>GRAMMAR</p>
+                <img src="img/grammar.png" alt="">
+            </div>
+            <div class="circle">
+                <p>PRACTICE <br> READING</p>
+                <img src="img/reading-book.png" alt="">
+            </div>
+            <div class="circle">
+                <p>PRACTICE <br> WRITING</p>
+                <img src="img/writing.png" alt="">
+            </div>
+            <div class="circle">
+                <p>PRACTICE <br> LISTENING</p>
+                <img src="img/headphones.png" alt="">
+            </div>
+            <a href="./CV.html"><div class="circle">
+                <p>CONTACT</p>
+                <img src="img/infor.png" alt="">
+            </div> </a>
+            </main>
+        </main>
+        <footer>
+            <div class="app">
+                <img src="img/face.png" alt="">
+                <img src="img/ins.png" alt="">
+                <img src="img/tiktok.png" alt="">
+                <img src="img/app.png" alt="">
+            </div>
+            <div class="locate">
+                <img src="img/map.png" alt="">
+                <p>Địa chỉ: <br>
+                    Cơ sở 1: Quận Hải Châu, thành phố Đà Nẵng <br>
+                    Cơ sở 2: Thị xã Hoài Nhơn, tỉnh Bình Định 
+                </p>
+            </div>
+            <p class="by">Web design by ThuNguyet</p>
+            
+        </footer>
+    </body>
+</html>

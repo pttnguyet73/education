@@ -1,0 +1,41 @@
+
+    <!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng nhập/Đăng ký</title>
+    <link rel="stylesheet" href="css form.css">
+    <link rel="icon" href="img/logo2.png">
+</head>
+<body>
+	<div class="container">
+		<div class="form-box">
+			<h1>LOG IN</h1>
+			<form>
+                <div class="input-group">
+                    <label for="username">Username:</label>
+                    <input type="text" placeholder="Nhập username" name="username" id="username">
+                    </div>
+                    <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" placeholder="Nhập Password" name="password" id="password">
+                    </div>
+				<button type="submit" class="btn" onclick="submitForm()">Đăng nhập</button>
+           <a href="index.html">HOME</a>
+			</form>
+			<p>Chưa có tài khoản? <a href="dangki.html">Đăng ký ngay</a></p>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+    function submitForm() {
+        const name = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+        if (name === "" || pass === "") {
+            alert('Bạn chưa nhập đủ thông tin. Vui lòng kiểm tra và nhập !');
+        } else {
+            alert('Đăng nhập thành công ! MOON CENTER xin cảm ơn bạn.');
+        }
+    }
+</script>
+
+</html>

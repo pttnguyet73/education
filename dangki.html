@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đăng nhập/Đăng ký</title>
+    <link rel="stylesheet" href="css form.css">
+    <link rel="icon" href="img/logo2.png">
+</head>
+<body>
+	<div class="container">
+        <div class="form-box" id="dk">
+            <h1>SIGN UP</h1>
+            <h3>Thông tin tài khoản</h3>
+            <form action="" method="post">
+                <div class="input-group">
+               <label for="username">Username:</label>
+               <input type="text" placeholder="Nhập username" name="username" id="username">
+               </div>
+               <div class="input-group">
+               <label for="password">Password:</label>
+               <input type="password" placeholder="Nhập Password" name="password" id="password">
+               </div>
+               <div class="input-group">
+               <label for="again">Nhập lại Password:</label>
+               <input type="password" placeholder="Nhập lại Password" name="again" id="again">
+               </div>
+            </form>
+            <h3>Thông tin cá nhân</h3>
+            <form action="" method="post">
+                <div class="input-group">
+                <label for="name">Họ và tên:</label>
+                <input type="text" placeholder="Nhập họ và tên" name="name">
+                </div>
+                <div class="input-group">
+                <label for="gender">Giới tính:</label>
+                   <select id="gender" name="gender">
+                         <option value="nam" selected>Nam</option>
+                         <option value="nu">Nữ</option>
+                   </select>
+                   </div>
+                   <div class="input-group">
+                <label for="add">Địa chỉ:</label>
+                <textarea name="add" id="add" cols="20" rows="4"></textarea>
+                </div>
+                <div class="input-group">
+                <label for="ngaysinh">Ngày sinh:</label>
+               <input type="date" placeholder="mm/dd/yyyy" name="ngaysinh" id="ngaysinh"> 
+               </div>
+               <div class="input-group">
+               <label for="email">Email:</label>
+               <input type="text" placeholder="mailname@gmail.com" name="email" id="email">
+               </div>
+               <button class="btn" onclick="submitForm()">Đăng kí</button>
+               <button class="btn"><a href="index.html">HOME</a></button>
+               </div>
+        </div>
+	</div>
+</body>
+    <script type="text/javascript">
+        function submitForm() {
+            const name = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            const again = document.getElementById("again").value;
+            if (name === "" || pass === "" || again === "") {
+                alert('Bạn chưa nhập đủ thông tin. Vui lòng kiểm tra và nhập !');
+            } else {
+                alert('Đăng ký thành công ! MOON CENTER xin cảm ơn bạn.');
+            }
+        }
+    </script>
+
+</html>

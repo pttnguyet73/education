@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> MOON CENTER </title>
+        <link rel="icon" href="img/logo2.png">
+        <style>
+            html {
+                font-size: 62.5%;
+                background-image: url(img/BEACH\ LOVE\ 🌊🤍🏖_\ on\ Beach\ Love\ Australia.jpg);
+                background-size: cover;
+              }
+            * {
+                margin: 0 auto;
+                padding: 0;
+            }
+          /* định dạng avatar */
+          header,body {
+            width: 800px;
+            background-color: white;
+          }
+          .background {
+            width: 400px;
+            height: 220px;
+            box-sizing: border-box;
+            float: left;
+            background-color: #d3e3fc;
+            border-right: 2px solid #77A6F7;
+         }
+          .avatar {
+            width: 200px;
+            height: 200px;
+            border: 7px solid #00887A;      
+            border-radius: 50%; 
+            overflow: hidden;
+            box-sizing: border-box;
+            margin: 10px 100px;
+          }
+          .avatar img {
+            width: 100%;
+            height: auto;
+          }
+          /* ĐỊnh dạng tên */
+          .name {
+            width: 400px;
+            height: 220px;
+            float: left;
+          }
+          .name h1 {
+            font-size: 3rem;
+            color: #00887A;
+            text-align: center;
+            font-style: italic;
+            margin: 50px 5px 20px 5px;
+          }
+          .name h2 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-align: center;
+          }
+          /* định dạng green */
+          .green {
+            width: 800px;
+            background-color: #00887A;
+            display: flex;
+          }
+          .green img {
+            width: 50px;
+            height: 50px;
+            margin: 10px 20px 10px 40px;
+          }
+          .green p {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 25px 10px;
+            color: white;
+            font-style: italic;
+          }
+          /* dịnh dạng list */
+          .list {
+            width: 398px;
+            float: left;
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .gt { background-color: #d3e3fc;
+            border-right: 2px solid #77A6F7;
+          border-bottom: 2px solid #77A6F7;}
+          .list img {
+            width: 60px;
+            height: 60px;
+            margin: 10px 20px;
+          }
+          .list h3, .list h4 {
+             color: #00887A;
+             font-size: 2.5rem;
+             width: 250px ;
+            margin: 25px 5px 10px;
+            font-style: italic;
+          }
+          .list h3, .hobby1 h3 {
+            animation: text-shadow-2 1s infinite alternate;
+            text-shadow: 0 0 0 #00887A;
+          }
+          @keyframes text-shadow-2 {
+            0% {
+                   text-shadow: 0 0 0 #00887A;
+               }
+           100% {
+                  text-shadow: 0 0 20px #00887A;
+               }
+          }
+          .list .style, .style1 {
+            width:100px; 
+             border-bottom: 2px dashed #00887A;
+          }
+          .style { margin: 5px 50px;}
+          .style1 {margin: 5px 0;}
+          .list .icon {
+            width: 40px;
+            height: 40px;
+            margin: 10px 30px;
+          }
+          .list h5 {
+            width: 290px;
+            font-size: 2rem;
+            margin: 15px 0px 15px;
+            font-weight: lighter;
+          }
+          .list ul {
+            list-style-image: url(img/icons8-checkmark-50.png);
+            width: 400px;
+          }
+          li {
+            font-size: 2rem;
+            margin: 8px 15px 8px 40px;
+          }
+          /* định dạng tin học ngoại ngữ */
+          .star {
+            display: grid;
+            grid-template-areas: h1 h1 h1 h1 h2
+                                 h1 h1 h1 h1 h1
+                                 h1 h1 h1 h1 h2
+                                 h1 h1 h1 h2 h2;
+            grid-template-columns: repeat(5, 30px);
+            grid-template-rows:  repeat(4, 35px);
+            float: left;
+          }
+          .star img {
+            width: 20px;
+            height: 20px;
+          }
+          .tinhoc {
+            width: 100px;
+            float: left;
+          }
+          .tinhoc p {
+            font-size: 2rem;
+            padding: 7px;
+          }
+          /* Định dạng học vấn */
+          .list h6 {
+            color: #77A6F7;
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: bold;
+            text-align: left;
+            margin: 5px 25px;
+          }
+          .list>p {
+            margin: 7px 35px;
+            font-size: 2rem;
+          }
+          #inf{
+            font-style: italic;
+            margin: 7px 55px;
+          }
+          /* Định dạng hobby */
+          .hobby {
+            width: 650px;
+            background-color: #d3e3fc;
+            border: 2px solid #77A6F7;
+            margin-bottom: 20px;
+          }
+          .hobby1 {display: flex;}
+          .hobby1 img{
+            width: 80px; 
+            height: 80px;
+            margin: 10px 20px;
+          }
+          .hobby1 h3 {
+            color: #00887A;
+            font-size: 3rem;
+            margin: 30px 50px 30px 10px;
+          }
+          .hobby2 { display: flex;}
+          .hobby2 img {
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+          }
+          .hobby2 h5 {
+            font-size: 2rem;
+            margin: 15px 5px;
+          }
+          /* Định dạng thanh phần trăm */
+          .list1 { width: 700px;}
+          .list1 h3 { width: 400px;}
+          .khanang {
+            width: 350px;
+            float: left;
+          }
+          .progress {
+             position: relative;
+             width: 250px;
+             height: 20px;
+             background-color: #d3e3fc;
+             border: #77A6F7;
+             border-radius: 15px;
+             margin: 8px 0px;
+           }
+          @keyframes growth {
+            from {
+             opacity: 0;
+             width: 0;
+            }
+            to {
+              opacity: 1;
+              width: 100%;
+            }
+          }
+          .progress::before {
+            animation: growth 1.5s ease;
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "";
+            height: 100%;
+           background-color: #00887A;
+           z-index: 1;
+           border-radius: 15px;
+         }
+         .v1::before {
+          width: 50%;
+         }
+         .v2::before {
+          width: 80%;
+         }
+         .v3::before {
+          width: 30%;
+         }
+          </style>
+    </head>
+    <header>
+        <div class="background">
+         <div class="avatar">
+            <img src="img/nguyet1.jpg" alt="">
+         </div>
+        </div>
+        <div class="name">
+            <h1>PHẠM THỊ THU NGUYỆT</h1>
+            <h2>DEVELOPER</h2>
+        </div>
+        <div class="green">
+            <img src="img/icons8-gender-64 (1).png" alt="">
+            <p>Nữ</p>
+            <img src="img/icons8-phone-50.png" alt="">
+            <p>03692163624</p>
+            <img src="img/icons8-gmail-64.png" alt="">
+            <a href="mailto:pnguyet1992@gmail.com" style="color:#00887A"><p>pnguyet19921@gmail.com</p></a>
+        </div>
+    </header>
+    <body>
+        <div class="list gt">
+            <img src="img/infor.png" alt="">
+            <h3>Giới thiệu bản thân <div class="style"></div></h3>
+            <img class="icon" src="img/icons8-birthday-50.png" alt="">
+            <h4>07/03/2004</h4>
+            <img class="icon" src="img/icons8-location-50.png" alt="">
+            <h5>Phường Tam Quan Bắc, thị xã Hoài Nhơn, tỉnh Bình Định</h5>
+        </div>
+        <div class="list"> 
+            <img src="img/icons8-computer-64.png" alt="">
+            <h3>Tin học, ngoại ngữ  <div class="style"></div></h3>
+            <div class="tinhoc">
+                <p>Word </p>
+                <p>Excel</p>
+                <p>Powerpoint</p>
+                <p>English</p>
+            </div>
+            <div class="star">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h2" src="img/icons8-star-50.png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h2" src="img/icons8-star-50.png" alt="">
+            <img  class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h1" src="img/icons8-star-50 (1).png" alt="">
+            <img class="h2" src="img/icons8-star-50.png" alt="">
+            <img class="h2" src="img/icons8-star-50.png" alt="">
+            </div>
+        </div>
+        <div class="list">
+          <img src="img/icons8-education-64 (1).png" alt="">
+          <h3>Học vấn  <div class="style1"></div> </h3>
+          <h6>Đã từng học tại:</h6>
+          <p>Trường tiểu học số 1 Tam Quan Bắc <br> <br> Trường trung học cơ sở Tam Quan Bắc 
+             <br> <br> Trường trung học phổ thông Nguyễn Trân</p>
+          <h6>Đang theo học tại:</h6>
+          <p>Trường Đại học Sư phạm Kĩ thuật Đà Nẵng - Đại học Đà Nẵng</p>
+          <p id="inf">Khoa: Công nghệ số <br>
+           Ngành: Công nghệ thông tin <br>
+       Lớp: 22T1</p>
+          </div>
+        <div class="list">
+            <img src="img/icons8-goal-48.png" alt="">
+            <h3>Mục tiêu nghề nghiệp  <div class="style"></div></h3>
+           <ul>
+            <li>Mong muốn tìm được chỗ làm ổn định lâu dài.</li>
+            <li>Mong muốn tìm được chỗ làm có cơ hội thăng tiến tốt.</li>
+            <li>Mong muốn tìm được nơi có cơ hội cống hiến bản thân.</li>
+           </ul>
+        </div>
+        <div class="list">
+          <img src="img/icons8-skill-64.png" alt="">
+          <h3>Kỹ năng  <div class="style1"></div> </h3>
+          <ul>
+              <li>Kỹ năng thuyết trình</li>
+              <li>Kỹ năng làm việc nhóm</li>
+              <li>Kỹ năng giải quyết vấn đề</li>
+              <li>Kỹ năng quản lí thời gian</li>
+              <li>Kỹ năng phản biện</li>
+          </ul>
+        </div>
+        <div class="list list1">
+          <img src="img/icons8-capability-68.png" alt="">
+          <h3>Khả năng <div class="style1"></div></h3>
+          <div class="khanang">
+          <ul>
+           <li>Thiết kế Website</li>
+           <li>Code HTML/CSS</li>
+           <li>C/C++</li>
+          </ul>
+          </div>
+          <div class="khanang">
+            <div class="progress v1"></div>
+            <div class="progress v2"></div>
+            <div class="progress v3"></div>
+          </div>
+       </div>
+        <div style="clear:both;"></div>
+        <div class="hobby">
+          <div class="hobby1">
+            <img src="img/icons8-hobby-64.png" alt="">
+            <h3>Sở thích</h3>
+            </div>
+            <div class="hobby2">
+            <img src="img/reading-book.png" alt="">
+            <h5>Đọc sách</h5>
+            <img src="img/icons8-sport-48.png" alt="">
+            <h5>Thể thao</h5>
+            <img src="img/icons8-lifestyle-64.png" alt="">
+            <h5>Nghe nhạc</h5>
+            <img src="img/icons8-film-reel-50.png" alt="">
+            <h5>Xem phim</h5>
+            </div>
+        </div>
+    </body>
+    <script>
+
+    </script>
+    </html>

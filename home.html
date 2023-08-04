@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> MOON CENTER </title>
+        <link rel="icon" href="img/logo2.png">
+        <style>
+            html {font-size: 62.5%;
+        }
+            * {
+                margin: 0 auto;
+                padding: 0;
+        }
+        body {
+            height: 100%;
+            width: 1450px;
+            background-image: url(img/BEACH\ LOVE\ 🌊🤍🏖_\ on\ Beach\ Love\ Australia.jpg);
+            background-size: cover;
+        }
+        a {text-decoration: none;}
+        /* định dạng chung cho khung header, footer, .log và home */
+        header, footer, .log, .home {
+            margin: 10px;
+            box-sizing: border-box;
+            width: 90%;
+            float: right;
+        }
+        /*định dạng header */
+        header {
+            background-color: #d3e3fc;
+            display: flex;
+        }
+        .logo1,.monkey1{
+            flex: 1;
+        }
+        header div{
+            flex:3;
+        }
+        .logo1 {
+            display: flex;
+           align-items: center;
+           justify-content: center;
+        }
+        .monkey1 {
+            margin: 10px 10px 10px 80px;
+        }
+       .logo {
+            float: left;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;  
+            float:right;  
+        }
+        header h1, header h3 {
+            text-align: center;
+        }
+        header h1 {
+            font-size: 5.5rem;
+            font-family: cursive;
+            font-weight: bolder;
+            color: #00887A;
+            margin: 15px;
+        }
+        header h3 {
+            font-size: 3rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: lighter;
+        }
+       .monkey {
+           width: 80px;
+           height: 80px;
+           padding: 10px 30px;
+       }
+       header h5 {
+           font-size: 1.2rem;
+           color: #00887A;
+           font-weight: lighter;
+       }
+       /* Định dạng cho log */
+       .log {
+           background-color: #ffeee7;
+           border: 2px solid #d3e3fc;
+       }
+       .log p {
+        font-size: 1.7rem;
+        float: right;
+        width: 150px;
+        color: #00887A;
+        margin: 15px;
+        text-align: center;
+       }
+       .box {
+        float: right;
+        display: inline;
+        width: 80px;
+        padding: 8px;
+        border: 2px solid #d3e3fc;
+        background-color: white;
+        margin: 8px;
+        cursor: pointer;
+       }
+       .box h4 { 
+          text-align: center;
+          color: #00887A;
+          font-size: 1.5rem;
+        }
+        /* định dạng footer */
+        footer {
+            display: flex;
+            background-color: #d3e3fc;
+        }
+        .app, .locate { flex: 2;}
+        .app, .locate, .by{
+            padding: 15px 15px;
+            font-size:1.3rem;
+            color: #00887A;
+        }
+        .by { flex:1;}
+        .locate img {
+            float: left;
+        }
+        .by {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+        /* Định dạng menu*/
+            .menu {
+            width: 100px;
+            display: flex;
+            position: fixed;
+            top: -530px;
+            height: 100%;
+            transition: all 0.5s ease-in-out;
+        }
+            .menu.active {
+                top:20px;
+            }
+            .button {
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+                position: absolute;
+                top: 530px;
+            }
+           nav img, .button {
+            width: 75px;
+            height: 75px;
+            background-color: #d3e3fc;
+            border: 2px solid #77A6F7;
+            padding: 10px;
+            margin: 15px;
+            border-radius: 10%;
+            flex:1;
+        }
+       /* định dạng menu dọc */
+        ul li {
+            position: relative;
+          
+        }
+        ul li > ul{
+            list-style-type: none;
+             position:absolute;
+             top:15px;
+             right:-150px;
+             border: 2px solid #77A6F7;
+             border-radius: 10px;
+             width: 148px;
+             height: 95px;
+             background-color: #d3e3fc;
+             color: black;
+             font-size: 2rem;
+             display:none;
+             transform: translateX(-150px);
+             transition: transform 1s ease-in-out;
+             z-index: 1;
+       }
+       ul li > ul li {
+        text-align: center;
+        font-weight: bold;
+        padding: 40px 0 ;
+       }
+ul li:hover > ul
+       {
+             display:inline-block;
+       }
+       ul li > ul:hover {transform:translateX(0);
+       }
+        /* Định dạng home */
+        .home {
+            width: 90%;
+            border: 5px solid #00887A;
+            display: flex;
+            flex-wrap: wrap;   
+        }
+        .gt {width: 100%;}
+        .gt2,.gt1 {
+            color: #00887A;
+            font-size: 2.5rem;
+            display: block;
+        }
+        .gt1 { padding: 20px 20px 0px 20px;}
+        .gt2 {
+            padding: 0 60px;
+        }
+        .mucdich {
+            flex:1;
+        }
+        .mucdich img {
+            width: 150px;
+            height: 150px;
+          margin: 30px 80px;
+        }
+        .mucdich p {
+            font-size: 2.5rem;
+            font-style: italic;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 30px;
+        }
+        /* dinh dang course */
+        .course img {
+            width: 200px;
+            height: 200px;
+            margin: 20px 200px;
+        }
+        .course p { 
+            padding: 10px 30px;
+            font-size: 2rem;
+        }
+        .outline-width { 
+            width: 400px;
+            background-color: #00887A;
+            outline-color: #00ceb9;
+            outline-style: solid;
+            animation: outline-width 1s infinite alternate;
+            outline-width: 0;
+         }
+         @keyframes outline-width {
+            0% {
+                   outline-width: 0;
+              }
+            100% {
+                  outline-width: 10px;
+              }
+         }
+         .course h4 {
+           color: white;
+           font-weight: bold;
+           font-size: 2.5rem;
+           text-align: center;
+           margin: 0 0 0 10px;
+           cursor: pointer;
+        }
+         .course {
+            flex: 1;
+            margin: 25px;
+            padding: 0 0 10px 0;
+            background-color: white;
+         }
+         /* Định dạng asignment */
+         table {
+            margin: 20px;
+            border-collapse: collapse;
+            background-color: white; 
+         }
+         .home th, .home td {
+            font-size: 2.5rem;
+            color: #00887A;
+            text-align: center;
+            padding: 20px 90px;
+            cursor: pointer;
+        }
+         .home tr {
+            border: 5px solid #00887A;
+         }
+      /* định dạng cho phần menu js */
+      .home { display: none;}
+      .active {display: flex;}
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="logo1">
+            <a href="./index.html"><img src="img/logo2.png" alt="logo" class="logo"></a>
+            </div>
+            <div class="header">
+               <h1>ENGLISH</h1>
+               <h3>Key of success</h3>
+            </div>
+            <div class="monkey1">
+                <img src="img/monkey.png" alt="" class="monkey">
+                <h5>HOTLINE: 0397574773 <br>
+                <a href="mailto:pnguyet1992@gmail.com" style="color:#00887A"> EMAIL: pnguyet1992@gmail.com </a></h5>
+            </div>
+        </header>
+        <nav class="log">
+                 <div class="box">   
+                    <a href="index.html"><h4>SIGN OUT</h4></a>
+                </div>
+                <p>Welcome, ThuNguyet</p>
+            </nav>
+        <aside class="menu">
+            <img class="button" src="img/icons8-menu-24.png" alt="">
+            <nav> 
+                <ul>
+               <a href="#home1" class="item">
+                <li><img src="img/home.png" alt="">
+            <ul>
+                <li>HOME</li>
+            </ul>
+               </li></a>
+                <a href="#course1" class="item">
+                    <li><img src="img/course.png" alt="">
+                        <ul>
+                            <li>COURSE</li>
+                        </ul>
+                    </li></a>
+                <a href="#asignment" class="item">
+                    <li><img src="img/homework (1).png" alt="">
+                        <ul>
+                            <li>ASIGNMENT</li>
+                        </ul>
+                    </li></a>
+               <a href="./CV.html" class="item">
+                <li><img src="img/infor.png" alt="">
+                    <ul>
+                        <li>CONTACT</li>
+                    </ul>
+                </li></a>
+               </ul>
+            </nav>
+        </aside>
+         <main>
+            <div id="home1" class="home active">
+                <div class="gt">
+                <p class="gt1">  
+                    Moon Center là một trong những trung tâm dạy Anh Ngữ nổi tiếng ở Việt Nam. <br>
+                    Moon Center bao gồm các khóa học dành cho: </p>
+                   <p class="gt2">
+                        Sinh viên luyện thi lấy bằng B1, B2 chuẩn đầu ra ở các trường đại học. <br>
+                        Luyện thi đại học cho các học sinh đang học lớp 10, 11, 12. <br>
+                        Dạy tiếng anh cơ bản cho người mất gốc. <br>
+                        Dạy tiếng anh cho trẻ em từ 6 tuổi trở lên. </p>
+                     <p class="gt
+                     1">   
+                    Mục tiêu của giáo dục theo MOON CENTER:
+                  </p>
+                  </div>
+                  <div class="mucdich">
+                <p >Học để biết</p> 
+                <img src="img/education.png" alt="" >
+                </div>
+                <div class="mucdich">
+                <p >Học để làm</p>
+                <img src="img/icons8-education-64 (1).png" alt="">
+                </div>
+                <div class="mucdich">
+                <p >Học để chung sống</p>
+                <img src="img/homework.png" alt="">
+                </div>
+                <div class="mucdich">
+                <p >Học để tự <br>khẳng định mình</p>
+                <img src="img/icons8-education-64.png" alt="" style="margin: 0 80px;" >
+                </div>
+            </div>
+            <div id="course1" class="home" >
+                <div class="course">
+                <img src="img/course1.jpg" alt="">
+                <p><b style="font-size: 2.3rem;">Khóa học phát âm</b><br><br> Bạn loay hoay không biết làm cách nào phát âm tiếng Anh chuẩn? Vì thế bạn ngại giao tiếp trước mọi người?  Tham gia ngay khóa học Phát Âm để học qui tắc phát âm và luyện phát âm chuẩn tất cả các từ vựng trong tiếng Anh.<br></p>
+                   <div class="outline-width">
+                    <h4>HỌC THỬ TẠI ĐÂY</h4>
+                   </div>
+                </div>
+                <div class="course">
+                <img src="img/course2.jpg" alt="">
+                <p><b style="font-size: 2.3rem;">Khóa học từ vựng</b> <br><br> Bạn không biết làm thế nào để học, ghi nhớ, và áp dụng tất cả các từ vựng TA? Khóa học từ vựng là một giải pháp. Với khóa học này bạn được cung cấp tất cả các từ vựng cần thiết để tự tin giao tiếp trong tiếng Anh.</p>
+                <div class="outline-width">
+                     <h4>HỌC THỬ TẠI ĐÂY</h4>
+                   </div>
+               </div>
+                <div class="course">
+                <img src="img/course3.jpg" alt="">
+                <p><b style="font-size: 2.3rem;">Khóa học ngữ pháp</b><br><br>Bạn không biết làm thế nào để áp dụng các mẫu câu trong tiếng Anh? Trong khóa học này, bạn học cách sử dụng và áp dụng tất cả các mẫu câu và chủ điểm ngữ pháp cần thiết để tự tin nói tiếng Anh chuẩn.</p>
+                <div class="outline-width">
+                   <h4>HỌC THỬ TẠI ĐÂY</h4>
+                   </div>
+                </div>
+                <div class="course">
+                <img src="img/course4.jpg" alt="">
+                <p><b style="font-size: 2.3rem;">Khóa học luyện nghe</b><br><br> Rất nhiều học viên trước khi tham gia học tại MOON CENTER phản ánh khó khăn trong việc nghe - hiểu TA. Khóa học luyện nghe giúp bạn rèn luyện kĩ năng nghe - hiểu để tự tin giao tiếp nghe - nói TA </p>
+                <div class="outline-width">
+                <h4>HỌC THỬ TẠI ĐÂY</h4>
+                   </div>
+                </div>
+            </div>
+            <div id="asignment" class="home">
+               <table>
+                <tr>
+                    <th>TÊN BÀI TẬP</th>
+                    <TH>ĐIỂM</TH>
+                    <TH>THỜI GIAN LÀM BÀI</TH>
+                    <TH>TRẠNG THÁI</TH>
+                </tr>
+                <tr>
+                    <td>Bài tập 1</td>
+                    <td>10.0</td>
+                    <td>28:54</td>
+                    <td>Hoàn thành</td>
+                </tr>
+                <tr>
+                    <td>Bài tập 2</td>
+                    <td>8.5</td>
+                    <td>20:14</td>
+                    <td>Hoàn thành</td>
+                </tr>
+                <tr>
+                    <td>Bài tập 3</td>
+                    <td>9.0</td>
+                    <td>21:34</td>
+                    <td>Hoàn thành</td>
+                </tr>
+                <tr>
+                    <td>Bài tập 4</td>
+                    <td>9.5</td>
+                    <td>25:06</td>
+                    <td>Hoàn thành</td>
+                </tr>
+                <tr>
+                    <td>Bài tập 5</td>
+                    <td>10.0</td>
+                    <td>27:36</td>
+                    <td>Hoàn thành</td>
+                </tr>
+                <tr>
+                    <td>Bài tập 6</td>
+                    <td>0</td>
+                    <td>00:00</td>
+                    <td>Chưa hoàn thành</td>
+                </tr>
+                <tr>
+                    <td>.........</td>
+                    <td>....</td>
+                    <td>.....</td>
+                    <td>............</td>
+                </tr>
+               </table>
+            </div>
+        </main>
+        <footer>
+            <div class="app">
+                <img src="img/face.png" alt="">
+                <img src="img/ins.png" alt="">
+                <img src="img/tiktok.png" alt="">
+                <img src="img/app.png" alt="">
+            </div>
+            <div class="locate">
+                <img src="img/map.png" alt="">
+                <p>Địa chỉ: <br>
+                    Cơ sở 1: Quận Hải Châu, thành phố Đà Nẵng <br>
+                    Cơ sở 2: Thị xã Hoài Nhơn, tỉnh Bình Định 
+                </p>
+            </div>
+            <p class="by">Web design by ThuNguyet</p>
+        </footer>
+        <script>
+            const menuItems = document.querySelectorAll('.item');
+            const sections = document.querySelectorAll('.home');
+
+            menuItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const currentSection = document.querySelector(item.getAttribute('href'));
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                    });
+                    currentSection.classList.add('active');
+                })
+            })
+             /* Lấy nút toggle và thanh menu */
+       var menuToggle = document.querySelector('.button');
+       var menu = document.querySelector('.menu');
+        /* Thêm sự kiện click vào nút toggle */
+        menuToggle.addEventListener('click', function() {
+   /* Toggle class active để hiển thị/ẩn thanh menu */
+            menu.classList.toggle('active');
+       });
+        </script>
+    </body>
+</html>
